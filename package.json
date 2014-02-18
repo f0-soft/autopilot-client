@@ -1,0 +1,22 @@
+{
+	"name": "f0.autopilot-client",
+	"version": "0.0.1",
+	"description": "Autopilot-client",
+	"license": "BSD",
+	"author": {
+		"name": "Alexander Razygraev",
+		"email": "alexander@f0-soft.ru",
+		"url": "http://f0-soft.ru"
+	},
+
+	"private": true,
+	"main": "server.js",
+	"scripts": {
+		"test": "test/test.js"
+	},
+
+	"dependencies": {
+		"upnode": "",
+		"nodeunit": ""
+	}
+}
