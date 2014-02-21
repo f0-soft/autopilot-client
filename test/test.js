@@ -67,7 +67,9 @@ var objTestActionScheme = {
 		},
 		param:{ //Параметры блока
 			essence:'testCollection',
-			field:'testField'
+			field:'testField',
+			timePeriodMinSource:[['idBlock2', 'timePeriodMin']],
+			timePeriodMaxSource:[['idBlock2', 'timePeriodMax']]
 		}
 	},
 	'idBlock4':{
@@ -80,7 +82,7 @@ var objTestActionScheme = {
 		},
 		param:{ //Параметры блока
 			sum:10,
-			essence:'testCollection'
+			docSource:[['idBlock3', 'documents']]
 		}
 	},
 	'idBlock5':{
