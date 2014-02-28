@@ -164,6 +164,7 @@ exports.testInsertActionFromScheme = {
 	},
 	waiting:function( test ){
 		test.expect(0);
+
 		setTimeout(function(){
 			test.done();
 		}, 20000);
@@ -177,7 +178,7 @@ exports.testInsertActionFromScheme = {
 			},
 			fields:'all'
 		};
-
+		debugger
 		autopilot.findAction( oQuery, function( err, resultData ) {
 			if ( err ) {
 				console.log( err );
@@ -196,7 +197,7 @@ exports.testInsertActionFromScheme = {
 				'Объект действия возвращен с неправильным названием действия');
 			test.ok( resultData.action.condition.log.length,
 				'Объект действия возвращен с пустым логом');
-			test.ok( resultData.action.condition.childIds.length,
+			test.ok( resultData.action.condition.childId,
 				'Объект действия возвращен с пустым списком порожденных действий');
 			//Выводим текст лога действия
 			console.log( 'Лог действия: ' + resultData.action.eventName );
@@ -205,7 +206,7 @@ exports.testInsertActionFromScheme = {
 			}
 
 			//Сохраняем идентификатор дочернего действия
-			var childId = resultData.action.condition.childIds[0];
+			var childId = resultData.action.condition.childId;
 
 			//Читаем дочернее действие
 			var oQuery2 = {
@@ -214,7 +215,7 @@ exports.testInsertActionFromScheme = {
 				},
 				fields:'all'
 			};
-
+			debugger
 			autopilot.findAction( oQuery2, function( err, resultData2 ) {
 				if ( err ) {
 					console.log( err );
